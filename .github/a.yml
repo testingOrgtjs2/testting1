@@ -1,0 +1,16 @@
+#This would be manually triggered by RC Manager
+name: Update Release Tag
+on:
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag to update'
+        required: true
+        
+jobs:
+  a:
+    name: a
+    runs-on: ubuntu-latest
+    steps:
+      - name: a
+        runs: echo "a"
