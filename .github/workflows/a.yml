@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: a
-        run: echo "a"
+        run: echo ${{inputs.tag_name}}
