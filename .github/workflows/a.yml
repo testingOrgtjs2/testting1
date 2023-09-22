@@ -13,4 +13,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: a
-        runs: echo "a"
+        run: echo "a"
