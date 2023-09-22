@@ -12,6 +12,12 @@ jobs:
     name: a
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code, referencing to release branch
+        with:
+          ref: release/${{ inputs.tag_name }}
+          fetch-depth: 0
+        uses: actions/checkout@v3
+
       - name: config
         run: |
           git config user.name github-actions
