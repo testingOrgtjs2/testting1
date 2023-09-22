@@ -28,6 +28,6 @@ jobs:
         with:
           tags: release-${{ inputs.tag_name }}
           ref: release/${{ inputs.tag_name }}
-          github_token: ${{ secrets.ADMIN_PAT }}
+          # github_token: ${{ secrets.ADMIN_PAT }}
       # - name: echo
       #   run: echo ${{ secrets.ADMIN_PAT }}
