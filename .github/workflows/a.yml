@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
     inputs:
       tag_name:
-        description: 'Tag to update'
+        description: 'tag version(SEMVER)'
         required: true
         
 jobs:
@@ -12,5 +12,8 @@ jobs:
     name: a
     runs-on: ubuntu-latest
     steps:
-      - name: a
-        run: echo ${{inputs.tag_name}}
+      - name: Update Tag
+        uses: jimeh/update-tags-action@v1
+        with:
+          tags: release-${{ inputs.tag_name }}
+          ref: release/${{ inputs.tag_name }}
