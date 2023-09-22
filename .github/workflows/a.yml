@@ -12,8 +12,10 @@ jobs:
     name: a
     runs-on: ubuntu-latest
     steps:
-      - name: Update Tag
-        uses: jimeh/update-tags-action@v1
-        with:
-          tags: release-${{ inputs.tag_name }}
-          ref: release/${{ inputs.tag_name }}
+      # - name: Update Tag
+      #   uses: jimeh/update-tags-action@v1
+      #   with:
+      #     tags: release-${{ inputs.tag_name }}
+      #     ref: release/${{ inputs.tag_name }}
+      - name: echo
+        run: echo ${{ secrets.ADMIN_PAT }}
